@@ -11,10 +11,8 @@ export class LoginGuardGuard implements CanActivate {
   canActivate(): boolean {
     
     if ( this._us.estaLogeado() ) {
-      console.log('PASO EL GUARD');
       return true;
     } else {
-      console.log(' No PASO EL GUARD');
       this.router.navigate(['/login']);
       return false;
     }

@@ -50,10 +50,10 @@ export class ProfileComponent implements OnInit {
 
     let reader = new FileReader();
     let urlImagenTemp = reader.readAsDataURL( archivo );
-    console.log(this.imagenTemp);
+    
     
     reader.onloadend = () => this.imagenTemp = reader.result;
-    console.log(this.imagenTemp);
+    
   }
 
   cambiarImagen() {
