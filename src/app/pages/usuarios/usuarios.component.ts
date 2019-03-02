@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../models/usuario.model';
 import { UsuarioService } from '../../services/service.index';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
+declare var swal: any;
 
 @Component({
   selector: 'app-usuarios',
@@ -77,7 +78,7 @@ export class UsuariosComponent implements OnInit {
 
     swal( {
         title: 'Esta seguro?',
-        text: 'Seguro que quiere borrar a ' + usuario.nombre;
+        text: 'Seguro que quiere borrar a ' + usuario.nombre,
         icon: 'warning',
         buttons: true,
         dangerMode: true
